@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import Header from './Header';
+
 import PostCreate from './posts/PostCreate';
 import PostList from './posts/PostList';
 import PostEdit from './posts/PostEdit';
@@ -10,9 +12,10 @@ import PostShow from './posts/PostShow';
 
 const App = () => {
     return (
-        <div>
+        <div className="ui container">
             <BrowserRouter>
                 <div>
+                    <Header />
                     <Route path="/" exact component={PostList} />
                     <Route path="/posts/new" exact component={PostCreate} />
                     <Route path="/posts/edit" exact component={PostEdit} />
